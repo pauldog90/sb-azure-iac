@@ -1,19 +1,20 @@
 variable "location" {
-    description = "Azure region of resource"
-    type        = string
+  type = string
 }
 
-variable "swa_config" {
-    description = "Static Web App Config"
-    type = object({
-        name     = string
-        sku_tier = string
-        sku_size = string
-    })
+variable "environment" {
+  type = string
 }
 
 variable "tags" {
-    description = "tags to apply to resources"
-    type        = map(string)
-    default     = {}
+  type    = map(string)
+  default = {}
+}
+
+variable "swa_config" {
+  type = object({
+    name     = string
+    sku_tier = string
+    sku_size = string
+  })
 }

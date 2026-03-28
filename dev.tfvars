@@ -1,4 +1,5 @@
 location            = "uksouth"
+environment         = "dev"
 
 swa_config = {
     name     = "sausagebird-dev"

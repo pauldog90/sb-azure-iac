@@ -1,11 +1,10 @@
 locals {
-  app_name    = "sausagebird"
-  environment = "dev"
+  app_name = "sausagebird"
 
   location_short = {
     uksouth = "uks"
     ukwest  = "ukw"
   }[var.location]
 
-  resource_group_name = "rg-${local.location_short}-${local.app_name}-${local.environment}"
+  resource_group_name = "rg-${local.location_short}-${local.app_name}-${var.environment}"
 }
