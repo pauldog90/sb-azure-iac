@@ -1,0 +1,25 @@
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - index.html
+      - css.css
+      - javascript.js
+      - images/*
+      - images/**/*
+      - staticwebapp.config.json
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- checkout: self
+
+- task: AzureStaticWebApp@0
+  inputs:
+    app_location: "/"
+    output_location: ""
+    skip_app_build: true
+    azure_static_web_apps_api_token: "$(AZURE_STATIC_WEB_APPS_API_TOKEN)"
