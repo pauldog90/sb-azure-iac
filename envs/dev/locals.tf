@@ -2,8 +2,8 @@ locals {
   app_name = "sausagebird"
 
   location_short = {
-    uksouth = "uks"
-    ukwest  = "ukw"
+    uksouth    = "uks"
+    ukwest     = "ukw"
     westeurope = "euwest"
   }[var.location]
 
