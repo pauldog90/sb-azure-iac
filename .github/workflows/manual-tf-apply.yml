@@ -38,7 +38,7 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        working-directory: env/${{ inputs.environment }}
+        working-directory: envs/${{ inputs.environment }}
         run: terraform init
 
       - name: Terraform Format Check
@@ -48,5 +48,5 @@ jobs:
         run: terraform validate
 
       - name: Terraform Apply
-        working-directory: env/${{ inputs.environment }}
+        working-directory: envs/${{ inputs.environment }}
         run: terraform apply -auto-approve -var-file="${{ inputs.environment }}.tfvars" -no-color

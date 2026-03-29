@@ -33,7 +33,7 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        working-directory: env/dev
+        working-directory: envs/dev
         run: terraform init
 
       - name: Terraform Format Check
@@ -43,5 +43,5 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        working-directory: env/dev
+        working-directory: envs/dev
         run: terraform plan -var-file=dev.tfvars" -no-color
