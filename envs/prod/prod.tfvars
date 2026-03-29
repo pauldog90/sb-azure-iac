@@ -1,14 +1,14 @@
-location    = "uksouth"
-environment = "dev"
+location    = "westeurope"
+environment = "prod"
 
 swa_config = {
-  name     = "sausagebird-dev"
+  name     = "sausagebird"
   sku_tier = "Free"
   sku_size = "Free"
 }
 
 tags = {
-  environment = "dev"
+  environment = "prod"
   project     = "sausagebird"
   managed_by  = "terraform"
 }

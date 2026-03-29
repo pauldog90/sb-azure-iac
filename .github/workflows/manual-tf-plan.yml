@@ -43,7 +43,7 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan -var-file="${{name: Terraform Plan
+        run: terraform plan -var-file="${{ inputs.environment }}.tfvars" -no-color
 
 on:
   push:

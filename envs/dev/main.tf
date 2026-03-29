@@ -1,5 +1,5 @@
 module "static_site" {
-  source = "./modules/static-site"
+  source = "../../modules/static-site"
 
   location            = var.location
   resource_group_name = local.resource_group_name

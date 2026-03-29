@@ -33,7 +33,8 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
-        run: terraform init -backend-config="dev.backend.hcl" -reconfigure
+        working-directory: terraform/dev
+        run: terraform init
 
       - name: Terraform Format Check
         run: terraform fmt -check -recursive
@@ -42,4 +43,5 @@ jobs:
         run: terraform validate
 
       - name: Terraform Plan
-        run: terraform plan -var-file="dev.tfvars"
+        working-directory: terraform/dev
+        run: terraform plan -var-file=dev.tfvars" -no-color
