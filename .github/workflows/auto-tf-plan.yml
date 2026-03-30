@@ -1,9 +1,6 @@
 name: Automated Dev Terraform Plan
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
 
 permissions:
